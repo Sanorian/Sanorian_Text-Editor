@@ -4,7 +4,7 @@ from tkinter import colorchooser
 class TextEditor:
     def __init__(self, master):
         self.master = master
-        self.master.title("Текстовый редактор")
+        self.master.title("Text Editor")
         self.master.geometry("800x600")
 
         # Create menu bar
@@ -13,18 +13,18 @@ class TextEditor:
 
         # Create file menu
         self.file_menu = tk.Menu(self.menu_bar, tearoff=False)
-        self.menu_bar.add_cascade(label="Файл", menu=self.file_menu)
-        self.file_menu.add_command(label="Новый", command=self.new_file)
-        self.file_menu.add_command(label="Открыть", command=self.open_file)
-        self.file_menu.add_command(label="Сохранить", command=self.save_file)
+        self.menu_bar.add_cascade(label="File", menu=self.file_menu)
+        self.file_menu.add_command(label="New", command=self.new_file)
+        self.file_menu.add_command(label="Open", command=self.open_file)
+        self.file_menu.add_command(label="Save", command=self.save_file)
         self.file_menu.add_separator()
-        self.file_menu.add_command(label="Выйти", command=self.exit)
+        self.file_menu.add_command(label="Exit", command=self.exit)
 
         # Create color menu
         self.color_menu = tk.Menu(self.menu_bar, tearoff=False)
-        self.menu_bar.add_cascade(label="Сменить цвет", menu=self.color_menu)
-        self.color_menu.add_command(label="Цвет текста", command=self.change_text_color)
-        self.color_menu.add_command(label="Цвет заднего фона", command=self.change_bg_color)
+        self.menu_bar.add_cascade(label="Change color", menu=self.color_menu)
+        self.color_menu.add_command(label="Text", command=self.change_text_color)
+        self.color_menu.add_command(label="Background", command=self.change_bg_color)
 
         # Create text widget
         self.text_widget = tk.Text(self.master, font=("Arial", 12))
